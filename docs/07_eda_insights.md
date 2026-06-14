@@ -5,9 +5,9 @@
 Kaggle notebook:
 
 - Kernel: `tuannm3812/ai-agent-security-01-eda`
-- Successful version: `7`
+- Successful version: `9`
 - URL: <https://www.kaggle.com/code/tuannm3812/ai-agent-security-01-eda>
-- Pulled outputs: `artifacts/runs/kaggle-01-eda-v7/`
+- Pulled outputs: `artifacts/runs/kaggle-01-eda-v9/`
 
 Tracked run evidence:
 
@@ -16,12 +16,14 @@ Tracked run evidence:
 - `01_candidate_surface_examples.csv`
 - `01_fixture_summary.csv`
 - `01_tool_dictionary.csv`
-- `artifacts/analysis/01_eda_charts.png`
+- `01_eda_tool_side_effects.png`
+- `01_eda_fixture_scale.png`
+- `01_eda_pattern_density.png`
 - `ai-agent-security-01-eda.log`
 
 Most nested `artifacts/analysis/` files from Kaggle are duplicate notebook
-outputs and remain untracked. The chart image is tracked because it is a useful
-visual summary outside the rendered notebook.
+outputs and remain untracked. The root-level chart images are tracked because
+they are useful visual summaries outside the rendered notebook.
 
 ## 2. Package Scale
 

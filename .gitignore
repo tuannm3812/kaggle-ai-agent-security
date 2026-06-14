@@ -61,6 +61,12 @@ artifacts/runs/kaggle-01-eda-v7/artifacts/*
 !artifacts/runs/kaggle-01-eda-v7/artifacts/analysis/
 artifacts/runs/kaggle-01-eda-v7/artifacts/analysis/*
 !artifacts/runs/kaggle-01-eda-v7/artifacts/analysis/01_eda_charts.png
+!artifacts/runs/kaggle-01-eda-v9/
+!artifacts/runs/kaggle-01-eda-v9/*.csv
+!artifacts/runs/kaggle-01-eda-v9/*.json
+!artifacts/runs/kaggle-01-eda-v9/*.log
+!artifacts/runs/kaggle-01-eda-v9/*.png
+artifacts/runs/kaggle-01-eda-v9/artifacts/
 !artifacts/runs/kaggle-02-baseline-attack-v1/
 !artifacts/runs/kaggle-02-baseline-attack-v1/*.csv
 !artifacts/runs/kaggle-02-baseline-attack-v1/*.json

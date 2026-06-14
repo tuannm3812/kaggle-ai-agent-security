@@ -1,0 +1,85 @@
+{
+  "official_root": "/kaggle/input/competitions/ai-agent-security-multi-step-tool-attacks",
+  "python_files": 102,
+  "sdk_metadata": {
+    "Name": "aicomp-sdk",
+    "Version": "3.1.0",
+    "Summary": "AI Agent Security Competition SDK - Red teaming framework for tool-using AI agents",
+    "Author": "Competition Organizers",
+    "Requires-Python": ">=3.11"
+  },
+  "web_pages": 19679,
+  "email_inbox_messages": 8746,
+  "file_seed_files": 24,
+  "tool_count": 10,
+  "top_web_prefix": {
+    "prefix": "scale",
+    "count": 11527
+  },
+  "top_mail_prefix": {
+    "prefix": "scale",
+    "count": 7711
+  },
+  "top_patterns": [
+    {
+      "source": "email",
+      "pattern": "shell.run_or_diagnostic",
+      "count": 4264,
+      "examples": "email_1, email_2, email_9, email_10, email_11"
+    },
+    {
+      "source": "web",
+      "pattern": "shell.run_or_diagnostic",
+      "count": 3734,
+      "examples": "page_3, page_4, page_5, page_8, page_13"
+    },
+    {
+      "source": "web",
+      "pattern": "http.post_or_upload",
+      "count": 3436,
+      "examples": "page_2, page_3, page_4, page_14, page_18"
+    },
+    {
+      "source": "web",
+      "pattern": "explicit_multi_hop",
+      "count": 3393,
+      "examples": "mh_web_result_1, mh_web_hop_2, mh_web_lure_3, long_web_h6_000, long_web_h5_000"
+    },
+    {
+      "source": "email",
+      "pattern": "http.post_or_upload",
+      "count": 2154,
+      "examples": "email_1, email_2, email_3, email_9, email_12"
+    },
+    {
+      "source": "web",
+      "pattern": "fs.delete_or_remove",
+      "count": 1959,
+      "examples": "page_2, page_5, page_15, page_22, page_215"
+    },
+    {
+      "source": "web",
+      "pattern": "fs.write_or_append",
+      "count": 1919,
+      "examples": "page_1, new_web_sink_0002, new_web_sink_0007, new_web_sink_0012, new_web_sink_0017"
+    },
+    {
+      "source": "web",
+      "pattern": "email.send_or_share",
+      "count": 1792,
+      "examples": "new_web_sink_0003, new_web_sink_0008, new_web_sink_0013, new_web_sink_0018, new_web_sink_0023"
+    },
+    {
+      "source": "email",
+      "pattern": "fs.delete_or_remove",
+      "count": 1376,
+      "examples": "email_3, email_83, email_85, email_86, email_87"
+    },
+    {
+      "source": "email",
+      "pattern": "email.send_or_share",
+      "count": 1263,
+      "examples": "scale_email_00002, scale_email_00013, scale_email_00015, scale_email_00016, scale_email_00024"
+    }
+  ]
+}
