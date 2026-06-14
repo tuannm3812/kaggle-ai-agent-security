@@ -1,0 +1,12 @@
+kaggle
+aicomp-sdk
+jupyter
+ipykernel
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+tqdm
+rich
+pyyaml

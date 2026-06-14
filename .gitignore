@@ -1,0 +1,47 @@
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Kaggle credentials and local config
+.kaggle/
+kaggle.json
+kaggle_tuannm*.json
+
+# Competition data and generated outputs
+artifacts/
+data/
+input/
+working/
+*.zip
+*.tar.gz
+*.7z
+*.log
+submission.csv
+submission.json
+submission.zip
+
+# Experiment scratch space
+scratch/
+tmp/
+
