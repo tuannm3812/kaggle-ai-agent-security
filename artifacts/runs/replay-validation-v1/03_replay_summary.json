@@ -1,0 +1,9 @@
+{
+  "evaluated_candidates": 2,
+  "predicate_positive": 0,
+  "unique_score_cells": 2,
+  "elapsed_s": 54.801,
+  "max_replay_candidates": 2,
+  "max_tool_hops": 4,
+  "env": "sandbox_deterministic"
+}
