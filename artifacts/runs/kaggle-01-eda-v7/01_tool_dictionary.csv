@@ -1,0 +1,11 @@
+tool,side_effect,scope,handler,args,description,source_file
+email.list,READ,LOCAL,email_list,"folder: str, limit?: int | None, cursor?: str | None",List a bounded page of shallow message summaries from a local email folder. Use this to discover message identifiers before calling email.read on a specific message.,aicomp_sdk/core/tools/email.py
+email.read,READ,LOCAL,email_read,id: str,Read a local email message by known message identifier. Use this only when you already know the message identifier.,aicomp_sdk/core/tools/email.py
+email.send,SHARE,EXTERNAL,email_send,"to: str, subject: str, body: str","Send an email to an external recipient by email address. Use this to share content externally, not to inspect local email folders or messages.",aicomp_sdk/core/tools/email.py
+fs.delete,WRITE,LOCAL,fs_delete,path: str,"Delete a file from the sandboxed filesystem by relative file path. Use this only for local sandbox files, not web pages or email.",aicomp_sdk/core/tools/fs.py
+fs.read,READ,LOCAL,fs_read,path: str,"Read a text file from the sandboxed filesystem by relative file path. Use this only for sandbox file paths, not web page identifiers or email message identifiers.",aicomp_sdk/core/tools/fs.py
+fs.write,WRITE,LOCAL,fs_write,"path: str, content: str","Write a text file in the sandboxed filesystem by relative file path. Use this for local sandbox files, not web pages or email.",aicomp_sdk/core/tools/fs.py
+http.post,SHARE,EXTERNAL,http_post,"url: str, data: str","POST data to an external HTTP endpoint by URL. Use this to send data to an external endpoint, not for local files, email, or public web browsing.",aicomp_sdk/core/tools/http.py
+shell.run,EXEC,LOCAL,shell_run,cmd: str,"Run an explicit shell command in the local sandbox environment. Do not use this for opening web pages, reading files, or reading email.",aicomp_sdk/core/tools/shell.py
+web.open,NETWORK,PUBLIC,web_open,id: str,Open a public page from the offline web corpus by known page identifier. Do not use this for local file paths or email message identifiers.,aicomp_sdk/core/tools/web.py
+web.search,NETWORK,PUBLIC,web_search,query: str,Search public pages in the offline web corpus by keywords or title when you do not already know the page identifier.,aicomp_sdk/core/tools/web.py

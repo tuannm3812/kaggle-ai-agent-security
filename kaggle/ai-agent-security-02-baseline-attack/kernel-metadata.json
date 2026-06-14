@@ -1,0 +1,18 @@
+{
+  "id": "tuannm3812/ai-agent-security-02-baseline-attack",
+  "title": "AI Agent Security 02 Baseline Attack",
+  "code_file": "ai-agent-security-02-baseline-attack.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "ai-agent-security-multi-step-tool-attacks"
+  ],
+  "model_sources": []
+}

@@ -5,9 +5,9 @@
 Kaggle notebook:
 
 - Kernel: `tuannm3812/ai-agent-security-01-eda`
-- Successful version: `6`
+- Successful version: `7`
 - URL: <https://www.kaggle.com/code/tuannm3812/ai-agent-security-01-eda>
-- Pulled outputs: `artifacts/runs/kaggle-01-eda-v6/`
+- Pulled outputs: `artifacts/runs/kaggle-01-eda-v7/`
 
 Tracked run evidence:
 
@@ -16,10 +16,12 @@ Tracked run evidence:
 - `01_candidate_surface_examples.csv`
 - `01_fixture_summary.csv`
 - `01_tool_dictionary.csv`
+- `artifacts/analysis/01_eda_charts.png`
 - `ai-agent-security-01-eda.log`
 
-The nested `artifacts/analysis/` files from Kaggle are duplicate notebook
-outputs and remain untracked.
+Most nested `artifacts/analysis/` files from Kaggle are duplicate notebook
+outputs and remain untracked. The chart image is tracked because it is a useful
+visual summary outside the rendered notebook.
 
 ## 2. Package Scale
 
@@ -112,9 +114,17 @@ Yes, but it should be focused and small. The first EDA answered the package,
 tool, and fixture-dictionary questions. Before scaling prompt volume, we need a
 second pass that connects fixture IDs to replay outcomes.
 
-Recommended deep-dive notebook:
+Baseline deep-dive notebook:
 
 - `notebooks/02_baseline_attack.ipynb`
+- Kaggle kernel: `tuannm3812/ai-agent-security-02-baseline-attack`
+- Successful version: `1`
+- Pulled outputs: `artifacts/runs/kaggle-02-baseline-attack-v1/`
+
+The first baseline generates 12 static EDA-seed candidates across web, email,
+and mixed multi-hop surfaces. It validates the public `aicomp_sdk.attacks`
+contract and writes `attack.py`, `02_candidate_manifest.csv`, and
+`02_baseline_summary.json`.
 
 Primary questions:
 
@@ -125,8 +135,8 @@ Primary questions:
 5. Which families should be expanded: exfiltration, execution, share, write, or
    destructive write?
 
-The deep dive should write a manifest with candidate text, seed ID, source,
-predicates, severity, score-cell hash, and replay diagnostics.
+The next deep-dive pass should add replay outcomes to the manifest: predicate
+names, severity, score-cell hash, tool event counts, and replay diagnostics.
 
 ## 8. Strategy For The Next Notebook
 

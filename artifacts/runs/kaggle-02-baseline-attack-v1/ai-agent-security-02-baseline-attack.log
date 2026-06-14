@@ -1,0 +1,45 @@
+[{"stream_name":"stderr","time":10.310054435,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.310154599,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.310168128,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.310171611,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.238587116,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.238630804,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.238636404,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.238640875,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":14.077223221,"data":"repo_root: /kaggle/working\n"}
+,{"stream_name":"stdout","time":14.0772995,"data":"official_root: /kaggle/input/competitions/ai-agent-security-multi-step-tool-attacks\n"}
+,{"stream_name":"stdout","time":14.077306019,"data":"output_dir: /kaggle/working\n"}
+,{"stream_name":"stdout","time":14.07731572,"data":"competition_rerun: False\n"}
+,{"stream_name":"stdout","time":14.189189208,"data":"{\n"}
+,{"stream_name":"stdout","time":14.189230587,"data":"  \"candidate_count\": 12,\n"}
+,{"stream_name":"stdout","time":14.18923612,"data":"  \"attack_families\": [\n"}
+,{"stream_name":"stdout","time":14.189240657,"data":"    \"destructive_write\",\n"}
+,{"stream_name":"stdout","time":14.189252322,"data":"    \"encoded_instruction\",\n"}
+,{"stream_name":"stdout","time":14.189255575,"data":"    \"explicit_multi_hop\",\n"}
+,{"stream_name":"stdout","time":14.189258311,"data":"    \"hidden_background_instruction\",\n"}
+,{"stream_name":"stdout","time":14.189261048,"data":"    \"secret_read_exfiltration\",\n"}
+,{"stream_name":"stdout","time":14.189263693000001,"data":"    \"shell_diagnostic\",\n"}
+,{"stream_name":"stdout","time":14.189266522,"data":"    \"untrusted_share\",\n"}
+,{"stream_name":"stdout","time":14.18926922,"data":"    \"untrusted_share_scale\",\n"}
+,{"stream_name":"stdout","time":14.189271889,"data":"    \"untrusted_write\"\n"}
+,{"stream_name":"stdout","time":14.189274557,"data":"  ],\n"}
+,{"stream_name":"stdout","time":14.18927721,"data":"  \"surfaces\": {\n"}
+,{"stream_name":"stdout","time":14.189279867,"data":"    \"web\": 5,\n"}
+,{"stream_name":"stdout","time":14.189282487,"data":"    \"email\": 5,\n"}
+,{"stream_name":"stdout","time":14.189285115,"data":"    \"mixed\": 2\n"}
+,{"stream_name":"stdout","time":14.189287805,"data":"  },\n"}
+,{"stream_name":"stdout","time":14.189291566,"data":"  \"attack_path\": \"/kaggle/working/attack.py\",\n"}
+,{"stream_name":"stdout","time":14.18931047,"data":"  \"manifest_path\": \"/kaggle/working/02_candidate_manifest.csv\"\n"}
+,{"stream_name":"stdout","time":14.189315628,"data":"}\n"}
+,{"stream_name":"stdout","time":15.033572952,"data":"contract_check: passed for 12 candidates\n"}
+,{"stream_name":"stdout","time":15.056063762,"data":"RUN_LOCAL_EVALUATION is False; skipping evaluator replay in this notebook run.\n"}
+,{"stream_name":"stdout","time":15.077419097,"data":"Normal notebook run complete. Official server starts only during competition rerun.\n"}
+,{"stream_name":"stderr","time":18.699662905,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":18.699750232,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":18.944764414,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":18.944802206,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":20.158999055,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":20.578123736,"data":"[NbConvertApp] Writing 38907 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":24.281646633,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":25.414787915,"data":"[NbConvertApp] Writing 329682 bytes to __results__.html\n"}
+]

@@ -1,0 +1,21 @@
+{
+  "candidate_count": 12,
+  "attack_families": [
+    "destructive_write",
+    "encoded_instruction",
+    "explicit_multi_hop",
+    "hidden_background_instruction",
+    "secret_read_exfiltration",
+    "shell_diagnostic",
+    "untrusted_share",
+    "untrusted_share_scale",
+    "untrusted_write"
+  ],
+  "surfaces": {
+    "web": 5,
+    "email": 5,
+    "mixed": 2
+  },
+  "attack_path": "/kaggle/working/attack.py",
+  "manifest_path": "/kaggle/working/02_candidate_manifest.csv"
+}
