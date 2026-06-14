@@ -44,7 +44,8 @@ Initial project goals:
 |   |-- 03_attack_workflow.md
 |   |-- 04_agent_workflow.md
 |   |-- 05_strategy.md
-|   `-- 06_coding_rules.md
+|   |-- 06_coding_rules.md
+|   `-- 07_eda_insights.md
 |-- notebooks/
 |   |-- 01_eda.ipynb
 |   |-- 02_baseline_attack.ipynb
