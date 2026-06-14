@@ -41,7 +41,18 @@ submission.csv
 submission.json
 submission.zip
 
+# Tracked Kaggle run evidence. Keep the large official data and scratch
+# artifacts ignored, but allow selected small run outputs into GitHub.
+!artifacts/
+artifacts/*
+!artifacts/runs/
+artifacts/runs/*
+!artifacts/runs/kaggle-01-eda-v6/
+!artifacts/runs/kaggle-01-eda-v6/*.csv
+!artifacts/runs/kaggle-01-eda-v6/*.json
+!artifacts/runs/kaggle-01-eda-v6/*.log
+artifacts/runs/kaggle-01-eda-v6/artifacts/
+
 # Experiment scratch space
 scratch/
 tmp/
-

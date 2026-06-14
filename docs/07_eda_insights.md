@@ -5,22 +5,25 @@
 Kaggle notebook:
 
 - Kernel: `tuannm3812/ai-agent-security-01-eda`
-- Successful version: `3`
+- Successful version: `6`
 - URL: <https://www.kaggle.com/code/tuannm3812/ai-agent-security-01-eda>
-- Pulled outputs: `artifacts/runs/kaggle-01-eda-v3/`
+- Pulled outputs: `artifacts/runs/kaggle-01-eda-v6/`
 
-The pulled artifacts are intentionally kept out of git. The most important
-files are:
+Tracked run evidence:
 
 - `01_eda_summary.json`
 - `01_pattern_census.csv`
 - `01_candidate_surface_examples.csv`
+- `01_fixture_summary.csv`
 - `01_tool_dictionary.csv`
 - `ai-agent-security-01-eda.log`
 
+The nested `artifacts/analysis/` files from Kaggle are duplicate notebook
+outputs and remain untracked.
+
 ## 2. Package Scale
 
-The official Kaggle run found:
+The Kaggle run found:
 
 | Area | Count |
 | --- | ---: |
@@ -28,11 +31,29 @@ The official Kaggle run found:
 | Offline web pages | 19,679 |
 | Inbox emails | 8,746 |
 | Seed filesystem files | 24 |
+| Runtime tools | 10 |
 
-The fixture corpus is large enough that a manual prompt list will plateau
-quickly. We should generate prompt banks from fixture ids and pattern groups.
+The useful competition data is a replayable SDK environment, not a train/test
+table. Our core artifact should be a candidate generator plus replay manifest,
+not a static CSV model pipeline.
 
-## 3. Fixture Shape
+## 3. Tool Surface
+
+The tool dictionary confirms ten reachable actions:
+
+| Family | Tools | Attack relevance |
+| --- | --- | --- |
+| Web | `web.search`, `web.open` | Public untrusted source and multi-hop discovery. |
+| Email | `email.list`, `email.read`, `email.send` | Local untrusted source plus external share sink. |
+| File system | `fs.read`, `fs.write`, `fs.delete` | Secret access, unauthorized write, destructive action. |
+| Shell | `shell.run` | High-severity execution path. |
+| HTTP | `http.post` | External exfiltration sink. |
+
+Submission notebooks should not depend on internal SDK helpers. EDA can inspect
+official source files directly; final `attack.py` should import only the public
+attack contract from `aicomp_sdk.attacks`.
+
+## 4. Fixture Shape
 
 Top fixture families:
 
@@ -41,11 +62,11 @@ Top fixture families:
 | Web | `scale` | 11,527 |
 | Email | `scale` | 7,711 |
 
-The `scale` family dominates both surfaces, but `rt`, `long`, `new`, and `mh`
-are more interesting for early attack development because they include clearer
-red-team and multi-hop structure.
+The `scale` family dominates volume, but early attacks should not start only
+with high-volume IDs. The `mh`, `long`, `new`, and direct low-numbered examples
+are better for a baseline because they expose clearer tool chains and sinks.
 
-## 4. Attack-Surface Counts
+## 5. Attack-Surface Counts
 
 Top matched patterns from the Kaggle EDA run:
 
@@ -62,22 +83,63 @@ Top matched patterns from the Kaggle EDA run:
 | Email | `fs.delete_or_remove` | 1,376 |
 | Email | `email.send_or_share` | 1,263 |
 
-Implication: web has the richest multi-hop and share/write/delete surface;
-email has a strong diagnostic/exec surface. The first baseline should test both.
+Implication: web has the richest multi-hop and write/share/delete surface;
+email has an especially strong diagnostic/exec surface. The first attack
+notebook should cover both rather than overfitting to one channel.
 
-## 5. Strategy Implications
+## 6. Candidate Seeds
+
+Good first IDs from the pulled examples:
+
+| Attack family | Web seed | Email seed |
+| --- | --- | --- |
+| Secret read / exfiltration | `page_2` | `email_1` |
+| HTTP POST / upload | `page_2` | `email_1` |
+| Delete / destructive action | `page_2` | `email_3` |
+| Write / append | `page_1`, `new_web_sink_0002` | `scale_email_00000` |
+| Shell diagnostic | `page_3` | `email_1` |
+| Email share | `new_web_sink_0003` | `scale_email_00002` |
+| Encoded instruction | `page_3` | `email_7` |
+| Hidden/background instruction | `page_27` | `email_19` |
+| Explicit multi-hop | `mh_web_result_1` | `mh_email_1` |
+
+These seeds should become parameterized prompt families in
+`02_baseline_attack.ipynb`, not one-off manual prompts.
+
+## 7. Do We Need A Deep Dive?
+
+Yes, but it should be focused and small. The first EDA answered the package,
+tool, and fixture-dictionary questions. Before scaling prompt volume, we need a
+second pass that connects fixture IDs to replay outcomes.
+
+Recommended deep-dive notebook:
+
+- `notebooks/02_baseline_attack.ipynb`
+
+Primary questions:
+
+1. Which seed IDs actually trigger predicates against the target agent?
+2. Which prompt phrasings suppress or activate `UNTRUSTED_TO_ACTION`?
+3. Which chains produce distinct `score_cell_signature.hash` values?
+4. How many candidates can we return before replay caps or time budget matter?
+5. Which families should be expanded: exfiltration, execution, share, write, or
+   destructive write?
+
+The deep dive should write a manifest with candidate text, seed ID, source,
+predicates, severity, score-cell hash, and replay diagnostics.
+
+## 8. Strategy For The Next Notebook
 
 Priority for `02_baseline_attack.ipynb`:
 
-1. Build a prompt bank from top web and email ids, not hand-written prompts only.
-2. Start with high-confidence base ids: `page_2`, `page_4`, `page_10`,
-   `email_1`, `email_7`, and a few `long`/`new` multi-hop ids.
-3. Replay every returned candidate and store predicates plus
-   `score_cell_signature.hash`.
+1. Generate a small `attack.py` from structured prompt families.
+2. Include web, email, and multi-hop seeds from this EDA output.
+3. Replay candidates locally or on Kaggle and save a manifest.
 4. Dedupe by score-cell hash before expanding prompt volume.
 5. Keep prompt wording careful: avoid explicit authorization words when trying
    to trigger `UNTRUSTED_TO_ACTION` or `CONFUSED_DEPUTY`.
+6. Push the notebook to Kaggle, pull outputs, then commit the run evidence from
+   local Git rather than relying on Kaggle's copy-to-GitHub feature.
 
-The next notebook should produce the first manifest, not chase leaderboard
-submission yet.
-
+The next milestone is not a leaderboard submission yet. It is a working
+baseline attack notebook with reproducible replay evidence.

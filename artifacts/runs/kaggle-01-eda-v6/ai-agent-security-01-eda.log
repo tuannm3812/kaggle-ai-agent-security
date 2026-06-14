@@ -1,0 +1,109 @@
+[{"stream_name":"stderr","time":9.278132475,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.278249493,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.27825548,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.27825867,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.130538872,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.130710284,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.130716354,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.130719412,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.758777255,"data":"official_root: /kaggle/input/competitions/ai-agent-security-multi-step-tool-attacks\n"}
+,{"stream_name":"stdout","time":12.758878903,"data":"fixtures_root: /kaggle/input/competitions/ai-agent-security-multi-step-tool-attacks/aicomp_sdk/fixtures\n"}
+,{"stream_name":"stdout","time":12.75889006,"data":"artifact_dir: /kaggle/working/artifacts/analysis\n"}
+,{"stream_name":"stdout","time":13.02853369,"data":"python_files: 102\n"}
+,{"stream_name":"stdout","time":16.583328642,"data":"severity_weights: {1: 1, 2: 2, 3: 4, 4: 8, 5: 16}\n"}
+,{"stream_name":"stdout","time":16.583376421,"data":"attack_elite_raw: 200000.0\n"}
+,{"stream_name":"stdout","time":16.644053625,"data":"{\n"}
+,{"stream_name":"stdout","time":16.644096998,"data":"  \"official_root\": \"/kaggle/input/competitions/ai-agent-security-multi-step-tool-attacks\",\n"}
+,{"stream_name":"stdout","time":16.644102466,"data":"  \"python_files\": 102,\n"}
+,{"stream_name":"stdout","time":16.644106361,"data":"  \"sdk_metadata\": {\n"}
+,{"stream_name":"stdout","time":16.644116789999998,"data":"    \"Name\": \"aicomp-sdk\",\n"}
+,{"stream_name":"stdout","time":16.644120739,"data":"    \"Version\": \"3.1.0\",\n"}
+,{"stream_name":"stdout","time":16.644124563,"data":"    \"Summary\": \"AI Agent Security Competition SDK - Red teaming framework for tool-using AI agents\",\n"}
+,{"stream_name":"stdout","time":16.644128532,"data":"    \"Author\": \"Competition Organizers\",\n"}
+,{"stream_name":"stdout","time":16.644132495,"data":"    \"Requires-Python\": \"\u003e=3.11\"\n"}
+,{"stream_name":"stdout","time":16.644136752,"data":"  },\n"}
+,{"stream_name":"stdout","time":16.644140267,"data":"  \"web_pages\": 19679,\n"}
+,{"stream_name":"stdout","time":16.644143903,"data":"  \"email_inbox_messages\": 8746,\n"}
+,{"stream_name":"stdout","time":16.644147503,"data":"  \"file_seed_files\": 24,\n"}
+,{"stream_name":"stdout","time":16.644151182999998,"data":"  \"tool_count\": 10,\n"}
+,{"stream_name":"stdout","time":16.644154774,"data":"  \"top_web_prefix\": {\n"}
+,{"stream_name":"stdout","time":16.644158326,"data":"    \"prefix\": \"scale\",\n"}
+,{"stream_name":"stdout","time":16.644162115,"data":"    \"count\": 11527\n"}
+,{"stream_name":"stdout","time":16.644165716,"data":"  },\n"}
+,{"stream_name":"stdout","time":16.644169177,"data":"  \"top_mail_prefix\": {\n"}
+,{"stream_name":"stdout","time":16.644172757,"data":"    \"prefix\": \"scale\",\n"}
+,{"stream_name":"stdout","time":16.644176369,"data":"    \"count\": 7711\n"}
+,{"stream_name":"stdout","time":16.644179974,"data":"  },\n"}
+,{"stream_name":"stdout","time":16.644196948,"data":"  \"top_patterns\": [\n"}
+,{"stream_name":"stdout","time":16.644199955,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644202594,"data":"      \"source\": \"email\",\n"}
+,{"stream_name":"stdout","time":16.644205411,"data":"      \"pattern\": \"shell.run_or_diagnostic\",\n"}
+,{"stream_name":"stdout","time":16.644208257,"data":"      \"count\": 4264,\n"}
+,{"stream_name":"stdout","time":16.644210972,"data":"      \"examples\": \"email_1, email_2, email_9, email_10, email_11\"\n"}
+,{"stream_name":"stdout","time":16.644213822,"data":"    },\n"}
+,{"stream_name":"stdout","time":16.644216404,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644218983000002,"data":"      \"source\": \"web\",\n"}
+,{"stream_name":"stdout","time":16.644221766,"data":"      \"pattern\": \"shell.run_or_diagnostic\",\n"}
+,{"stream_name":"stdout","time":16.644224539,"data":"      \"count\": 3734,\n"}
+,{"stream_name":"stdout","time":16.644227215,"data":"      \"examples\": \"page_3, page_4, page_5, page_8, page_13\"\n"}
+,{"stream_name":"stdout","time":16.644229995,"data":"    },\n"}
+,{"stream_name":"stdout","time":16.644232568,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644235148,"data":"      \"source\": \"web\",\n"}
+,{"stream_name":"stdout","time":16.644237868,"data":"      \"pattern\": \"http.post_or_upload\",\n"}
+,{"stream_name":"stdout","time":16.644240615,"data":"      \"count\": 3436,\n"}
+,{"stream_name":"stdout","time":16.644243299,"data":"      \"examples\": \"page_2, page_3, page_4, page_14, page_18\"\n"}
+,{"stream_name":"stdout","time":16.644246543,"data":"    },\n"}
+,{"stream_name":"stdout","time":16.644269559,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644274269,"data":"      \"source\": \"web\",\n"}
+,{"stream_name":"stdout","time":16.644278516,"data":"      \"pattern\": \"explicit_multi_hop\",\n"}
+,{"stream_name":"stdout","time":16.644283343,"data":"      \"count\": 3393,\n"}
+,{"stream_name":"stdout","time":16.644287876,"data":"      \"examples\": \"mh_web_result_1, mh_web_hop_2, mh_web_lure_3, long_web_h6_000, long_web_h5_000\"\n"}
+,{"stream_name":"stdout","time":16.644292708000002,"data":"    },\n"}
+,{"stream_name":"stdout","time":16.644296243,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644300091,"data":"      \"source\": \"email\",\n"}
+,{"stream_name":"stdout","time":16.644304189,"data":"      \"pattern\": \"http.post_or_upload\",\n"}
+,{"stream_name":"stdout","time":16.644308305,"data":"      \"count\": 2154,\n"}
+,{"stream_name":"stdout","time":16.644312772,"data":"      \"examples\": \"email_1, email_2, email_3, email_9, email_12\"\n"}
+,{"stream_name":"stdout","time":16.644318877,"data":"    },\n"}
+,{"stream_name":"stdout","time":16.64432664,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644329294,"data":"      \"source\": \"web\",\n"}
+,{"stream_name":"stdout","time":16.644331968,"data":"      \"pattern\": \"fs.delete_or_remove\",\n"}
+,{"stream_name":"stdout","time":16.644334681,"data":"      \"count\": 1959,\n"}
+,{"stream_name":"stdout","time":16.644337378,"data":"      \"examples\": \"page_2, page_5, page_15, page_22, page_215\"\n"}
+,{"stream_name":"stdout","time":16.644340187,"data":"    },\n"}
+,{"stream_name":"stdout","time":16.644342717,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644345261,"data":"      \"source\": \"web\",\n"}
+,{"stream_name":"stdout","time":16.644347936,"data":"      \"pattern\": \"fs.write_or_append\",\n"}
+,{"stream_name":"stdout","time":16.644350612,"data":"      \"count\": 1919,\n"}
+,{"stream_name":"stdout","time":16.644373899,"data":"      \"examples\": \"page_1, new_web_sink_0002, new_web_sink_0007, new_web_sink_0012, new_web_sink_0017\"\n"}
+,{"stream_name":"stdout","time":16.644379594,"data":"    },\n"}
+,{"stream_name":"stdout","time":16.644384206,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644388787,"data":"      \"source\": \"web\",\n"}
+,{"stream_name":"stdout","time":16.644393703,"data":"      \"pattern\": \"email.send_or_share\",\n"}
+,{"stream_name":"stdout","time":16.644397768,"data":"      \"count\": 1792,\n"}
+,{"stream_name":"stdout","time":16.644401839,"data":"      \"examples\": \"new_web_sink_0003, new_web_sink_0008, new_web_sink_0013, new_web_sink_0018, new_web_sink_0023\"\n"}
+,{"stream_name":"stdout","time":16.64440626,"data":"    },\n"}
+,{"stream_name":"stdout","time":16.644410066,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644415991,"data":"      \"source\": \"email\",\n"}
+,{"stream_name":"stdout","time":16.644420217,"data":"      \"pattern\": \"fs.delete_or_remove\",\n"}
+,{"stream_name":"stdout","time":16.644424291,"data":"      \"count\": 1376,\n"}
+,{"stream_name":"stdout","time":16.644428322,"data":"      \"examples\": \"email_3, email_83, email_85, email_86, email_87\"\n"}
+,{"stream_name":"stdout","time":16.6444325,"data":"    },\n"}
+,{"stream_name":"stdout","time":16.64443645,"data":"    {\n"}
+,{"stream_name":"stdout","time":16.644446213,"data":"      \"source\": \"email\",\n"}
+,{"stream_name":"stdout","time":16.64444962,"data":"      \"pattern\": \"email.send_or_share\",\n"}
+,{"stream_name":"stdout","time":16.644452279,"data":"      \"count\": 1263,\n"}
+,{"stream_name":"stdout","time":16.644455537,"data":"      \"examples\": \"scale_email_00002, scale_email_00013, scale_email_00015, scale_email_00016, scale_email_00024\"\n"}
+,{"stream_name":"stdout","time":16.644474311,"data":"    }\n"}
+,{"stream_name":"stdout","time":16.644479163,"data":"  ]\n"}
+,{"stream_name":"stdout","time":16.644483555,"data":"}\n"}
+,{"stream_name":"stdout","time":16.644488456,"data":"wrote: /kaggle/working/artifacts/analysis/01_eda_summary.json\n"}
+,{"stream_name":"stderr","time":20.332377074,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":20.332419845,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":20.56405208,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":20.564089615,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":21.633043789,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":22.054944691,"data":"[NbConvertApp] Writing 115846 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":25.578044061,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":26.8216334,"data":"[NbConvertApp] Writing 408447 bytes to __results__.html\n"}
+]
