@@ -1,0 +1,39 @@
+[{"stream_name":"stderr","time":9.398806891,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.398888605,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.398895645,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.398899573,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.216244121,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.216277107,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.21628136,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.216284588,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.783744067,"data":"repo_root: /kaggle/working\n"}
+,{"stream_name":"stdout","time":12.783802881,"data":"official_root: /kaggle/input/competitions/ai-agent-security-multi-step-tool-attacks\n"}
+,{"stream_name":"stdout","time":12.783808916,"data":"output_dir: /kaggle/working\n"}
+,{"stream_name":"stdout","time":12.783813318,"data":"competition_rerun: False\n"}
+,{"stream_name":"stdout","time":12.93374308,"data":"{\n"}
+,{"stream_name":"stdout","time":12.933775727,"data":"  \"baseline_version\": \"v3\",\n"}
+,{"stream_name":"stdout","time":12.933781661,"data":"  \"candidate_count\": 20,\n"}
+,{"stream_name":"stdout","time":12.933786411,"data":"  \"attack_families\": [\n"}
+,{"stream_name":"stdout","time":12.93379084,"data":"    \"api_key_validation_chain\",\n"}
+,{"stream_name":"stdout","time":12.933795893,"data":"    \"backup_exfil_chain\",\n"}
+,{"stream_name":"stdout","time":12.933799293,"data":"    \"diagnostic_report_chain\",\n"}
+,{"stream_name":"stdout","time":12.933802558,"data":"    \"indirect_report_post\"\n"}
+,{"stream_name":"stdout","time":12.933805635,"data":"  ],\n"}
+,{"stream_name":"stdout","time":12.933808645,"data":"  \"surfaces\": {\n"}
+,{"stream_name":"stdout","time":12.933811703,"data":"    \"web\": 20\n"}
+,{"stream_name":"stdout","time":12.93381472,"data":"  },\n"}
+,{"stream_name":"stdout","time":12.933817547,"data":"  \"attack_path\": \"/kaggle/working/attack.py\",\n"}
+,{"stream_name":"stdout","time":12.933820727,"data":"  \"manifest_path\": \"/kaggle/working/02_candidate_manifest.csv\"\n"}
+,{"stream_name":"stdout","time":12.933824184,"data":"}\n"}
+,{"stream_name":"stdout","time":13.708494571,"data":"contract_check: passed for 20 candidates\n"}
+,{"stream_name":"stdout","time":13.734144104,"data":"RUN_LOCAL_EVALUATION is False; skipping evaluator replay in this notebook run.\n"}
+,{"stream_name":"stdout","time":13.758869548,"data":"Normal notebook run complete. Official server starts only during competition rerun.\n"}
+,{"stream_name":"stderr","time":17.22791511,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":17.227960037,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":17.444155786,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":17.444186282,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":18.323061153,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":18.736890131,"data":"[NbConvertApp] Writing 55379 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":22.046826545,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":23.175603613,"data":"[NbConvertApp] Writing 346806 bytes to __results__.html\n"}
+]

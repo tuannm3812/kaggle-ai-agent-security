@@ -79,6 +79,17 @@ artifacts/runs/kaggle-02-baseline-attack-v1/__pycache__/
 !artifacts/runs/kaggle-02-baseline-attack-v2/*.log
 !artifacts/runs/kaggle-02-baseline-attack-v2/attack.py
 artifacts/runs/kaggle-02-baseline-attack-v2/__pycache__/
+!artifacts/runs/kaggle-02-baseline-attack-v3/
+!artifacts/runs/kaggle-02-baseline-attack-v3/*.csv
+!artifacts/runs/kaggle-02-baseline-attack-v3/*.json
+!artifacts/runs/kaggle-02-baseline-attack-v3/*.log
+!artifacts/runs/kaggle-02-baseline-attack-v3/attack.py
+artifacts/runs/kaggle-02-baseline-attack-v3/__pycache__/
+!artifacts/runs/baseline-attack-v3/
+!artifacts/runs/baseline-attack-v3/*.csv
+!artifacts/runs/baseline-attack-v3/*.json
+!artifacts/runs/baseline-attack-v3/attack.py
+artifacts/runs/baseline-attack-v3/__pycache__/
 !artifacts/runs/replay-validation-v1/
 !artifacts/runs/replay-validation-v1/*.csv
 !artifacts/runs/replay-validation-v1/*.json
@@ -92,6 +103,10 @@ artifacts/runs/kaggle-02-baseline-attack-v2/__pycache__/
 !artifacts/runs/replay-validation-v5/*.csv
 !artifacts/runs/replay-validation-v5/*.json
 artifacts/runs/replay-validation-v5/03_replay_traces.json
+!artifacts/runs/replay-validation-v6/
+!artifacts/runs/replay-validation-v6/*.csv
+!artifacts/runs/replay-validation-v6/*.json
+artifacts/runs/replay-validation-v6/03_replay_traces.json
 
 # Experiment scratch space
 scratch/

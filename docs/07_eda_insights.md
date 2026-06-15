@@ -120,25 +120,26 @@ Baseline deep-dive notebook:
 
 - `notebooks/02_baseline_attack.ipynb`
 - Kaggle kernel: `tuannm3812/ai-agent-security-02-baseline-attack`
-- Successful version: `2`
-- Pulled outputs: `artifacts/runs/kaggle-02-baseline-attack-v2/`
+- Latest local version: `v3`
+- Latest local outputs: `artifacts/runs/baseline-attack-v3/`
+- Latest successful Kaggle version: `3`
+- Latest pulled Kaggle outputs: `artifacts/runs/kaggle-02-baseline-attack-v3/`
 
-The second baseline generates 23 static candidates across web, email, file,
-direct, and mixed multi-hop surfaces. It keeps the v1 EDA seeds and adds more
-targeted v2 probes: indirect report-post pages, API-key validation pages,
-diagnostic/shell pages, file-to-web bridge attempts, and direct sink probes.
-It validates the public `aicomp_sdk.attacks` contract and writes `attack.py`,
+Baseline v3 generates 20 focused web candidates from the four v2 families that
+were predicate-positive under a permissive guardrail: report-post, backup
+exfiltration, API-key validation, and diagnostic execution. It keeps the attack
+code self-contained for Kaggle and writes `attack.py`,
 `02_candidate_manifest.csv`, and `02_baseline_summary.json`.
 
 Replay validation:
 
 - Notebook: `notebooks/03_replay_validation.ipynb`
-- Latest local outputs: `artifacts/runs/replay-validation-v5/`
-- Evaluated candidates: `18`
-- Replay rows: `36` (`18` optimal guardrail + `18` permissive guardrail)
+- Latest local outputs: `artifacts/runs/replay-validation-v6/`
+- Evaluated candidates: `20`
+- Replay rows: `40` (`20` optimal guardrail + `20` permissive guardrail)
 - Optimal predicate-positive candidates: `0`
-- Permissive predicate-positive candidates: `4`
-- Unique score-cell hashes observed: `17`
+- Permissive predicate-positive candidates: `20`
+- Unique score-cell hashes observed: `4`
 
 Replay observations:
 
@@ -171,10 +172,11 @@ Replay observations:
   blocks. It also includes direct successful `http.post` and `shell.run` probes
   for comparison, but these do not trigger predicates without an untrusted
   source or secret-like payload.
-- Baseline v3 should start from the four permissive-only positives and vary
-  timing, surface transitions, and target phrasing around those exact chains.
-  Broad candidate expansion should wait until these known-positive families are
-  tested more deeply.
+- Baseline v3 confirms all 20 focused variants remain score-relevant under the
+  permissive guardrail. The optimal guardrail blocks every replayed variant at
+  either `web.open -> http.post` or `web.open -> shell.run`, so local
+  deterministic replay is now useful mainly as a family filter, not as proof of
+  optimal-guardrail bypass.
 
 Primary questions:
 
@@ -185,26 +187,22 @@ Primary questions:
 5. Which families should be expanded: exfiltration, execution, share, write, or
    destructive write?
 
-The next deep-dive pass should convert the permissive-only positives into a
-small baseline v3 notebook. The goal is not volume; it is bypass-oriented
-variants around report-post, backup exfiltration, API-key validation, and
-diagnostic execution chains.
+Baseline v3 has now run successfully on Kaggle as a normal notebook version.
+The next deep-dive pass should use competition rerun/submission feedback, when
+available, to decide whether v4 should expand these four families or switch to a
+different surface such as email/share/write.
 
 ## 8. Strategy For The Next Notebook
 
 Priority for `02_baseline_attack.ipynb`:
 
-1. Generate a small v3 `attack.py` from the four permissive-only positive
-   prompt families.
-2. Add bypass variants that separate source discovery from action phrasing,
-   vary target names, and test short multi-message timing.
-3. Replay candidates locally with both optimal and permissive guardrails, then
-   save a comparison manifest.
+1. Submit/run the v3 notebook through the competition rerun path.
+2. Pull any submission or rerun outputs into a versioned artifact directory.
+3. Compare the competition feedback against replay v6.
 4. Dedupe by score-cell hash before expanding prompt volume.
 5. Keep prompt wording careful: avoid explicit authorization words when trying
    to trigger `UNTRUSTED_TO_ACTION` or `CONFUSED_DEPUTY`.
-6. Push the notebook to Kaggle, pull outputs, then commit the run evidence from
-   local Git rather than relying on Kaggle's copy-to-GitHub feature.
+6. Commit the Kaggle run evidence from local Git rather than relying on
+   Kaggle's copy-to-GitHub feature.
 
-The next milestone is a baseline v3 attack notebook with replay evidence that
-shows whether any bypass variants survive the optimal guardrail.
+The next milestone is competition feedback for v3.

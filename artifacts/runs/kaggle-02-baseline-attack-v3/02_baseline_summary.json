@@ -1,0 +1,15 @@
+{
+  "baseline_version": "v3",
+  "candidate_count": 20,
+  "attack_families": [
+    "api_key_validation_chain",
+    "backup_exfil_chain",
+    "diagnostic_report_chain",
+    "indirect_report_post"
+  ],
+  "surfaces": {
+    "web": 20
+  },
+  "attack_path": "/kaggle/working/attack.py",
+  "manifest_path": "/kaggle/working/02_candidate_manifest.csv"
+}
