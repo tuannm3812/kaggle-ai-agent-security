@@ -88,6 +88,10 @@ artifacts/runs/kaggle-02-baseline-attack-v2/__pycache__/
 !artifacts/runs/replay-validation-v4/
 !artifacts/runs/replay-validation-v4/*.csv
 !artifacts/runs/replay-validation-v4/*.json
+!artifacts/runs/replay-validation-v5/
+!artifacts/runs/replay-validation-v5/*.csv
+!artifacts/runs/replay-validation-v5/*.json
+artifacts/runs/replay-validation-v5/03_replay_traces.json
 
 # Experiment scratch space
 scratch/
