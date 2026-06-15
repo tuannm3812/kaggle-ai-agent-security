@@ -73,12 +73,21 @@ artifacts/runs/kaggle-01-eda-v9/artifacts/
 !artifacts/runs/kaggle-02-baseline-attack-v1/*.log
 !artifacts/runs/kaggle-02-baseline-attack-v1/attack.py
 artifacts/runs/kaggle-02-baseline-attack-v1/__pycache__/
+!artifacts/runs/kaggle-02-baseline-attack-v2/
+!artifacts/runs/kaggle-02-baseline-attack-v2/*.csv
+!artifacts/runs/kaggle-02-baseline-attack-v2/*.json
+!artifacts/runs/kaggle-02-baseline-attack-v2/*.log
+!artifacts/runs/kaggle-02-baseline-attack-v2/attack.py
+artifacts/runs/kaggle-02-baseline-attack-v2/__pycache__/
 !artifacts/runs/replay-validation-v1/
 !artifacts/runs/replay-validation-v1/*.csv
 !artifacts/runs/replay-validation-v1/*.json
 !artifacts/runs/replay-validation-v2/
 !artifacts/runs/replay-validation-v2/*.csv
 !artifacts/runs/replay-validation-v2/*.json
+!artifacts/runs/replay-validation-v4/
+!artifacts/runs/replay-validation-v4/*.csv
+!artifacts/runs/replay-validation-v4/*.json
 
 # Experiment scratch space
 scratch/

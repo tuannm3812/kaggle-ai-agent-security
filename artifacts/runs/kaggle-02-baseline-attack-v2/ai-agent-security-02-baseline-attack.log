@@ -1,0 +1,58 @@
+[{"stream_name":"stderr","time":8.262043935,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.26211198,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.262117408,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.262120295,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.007147095,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.007192482,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.007197913,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.007200751,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":11.372194624,"data":"repo_root: /kaggle/working\n"}
+,{"stream_name":"stdout","time":11.372260009,"data":"official_root: /kaggle/input/competitions/ai-agent-security-multi-step-tool-attacks\n"}
+,{"stream_name":"stdout","time":11.372265624,"data":"output_dir: /kaggle/working\n"}
+,{"stream_name":"stdout","time":11.372269497,"data":"competition_rerun: False\n"}
+,{"stream_name":"stdout","time":11.49281373,"data":"{\n"}
+,{"stream_name":"stdout","time":11.492852955,"data":"  \"baseline_version\": \"v2\",\n"}
+,{"stream_name":"stdout","time":11.492859299,"data":"  \"candidate_count\": 23,\n"}
+,{"stream_name":"stdout","time":11.492863525,"data":"  \"attack_families\": [\n"}
+,{"stream_name":"stdout","time":11.492867408,"data":"    \"api_key_validation_chain\",\n"}
+,{"stream_name":"stdout","time":11.49287141,"data":"    \"backup_exfil_chain\",\n"}
+,{"stream_name":"stdout","time":11.492875456,"data":"    \"credential_audit_chain\",\n"}
+,{"stream_name":"stdout","time":11.49287921,"data":"    \"destructive_write\",\n"}
+,{"stream_name":"stdout","time":11.492882998,"data":"    \"diagnostic_report_chain\",\n"}
+,{"stream_name":"stdout","time":11.492886508,"data":"    \"direct_exec_probe\",\n"}
+,{"stream_name":"stdout","time":11.492890015,"data":"    \"direct_share_probe\",\n"}
+,{"stream_name":"stdout","time":11.49289355,"data":"    \"encoded_instruction\",\n"}
+,{"stream_name":"stdout","time":11.492897582,"data":"    \"explicit_multi_hop\",\n"}
+,{"stream_name":"stdout","time":11.492901791,"data":"    \"file_cleanup_write\",\n"}
+,{"stream_name":"stdout","time":11.492905273,"data":"    \"file_to_web_multihop\",\n"}
+,{"stream_name":"stdout","time":11.492909051,"data":"    \"hidden_background_instruction\",\n"}
+,{"stream_name":"stdout","time":11.49291314,"data":"    \"indirect_report_post\",\n"}
+,{"stream_name":"stdout","time":11.492916978,"data":"    \"metrics_post_chain\",\n"}
+,{"stream_name":"stdout","time":11.492920775,"data":"    \"secret_read_exfiltration\",\n"}
+,{"stream_name":"stdout","time":11.492924626,"data":"    \"shell_diagnostic\",\n"}
+,{"stream_name":"stdout","time":11.49292829,"data":"    \"untrusted_share\",\n"}
+,{"stream_name":"stdout","time":11.492932388,"data":"    \"untrusted_share_scale\",\n"}
+,{"stream_name":"stdout","time":11.492936203,"data":"    \"untrusted_write\"\n"}
+,{"stream_name":"stdout","time":11.492940069,"data":"  ],\n"}
+,{"stream_name":"stdout","time":11.492943634,"data":"  \"surfaces\": {\n"}
+,{"stream_name":"stdout","time":11.492947264,"data":"    \"web\": 11,\n"}
+,{"stream_name":"stdout","time":11.492967649,"data":"    \"email\": 5,\n"}
+,{"stream_name":"stdout","time":11.492970382,"data":"    \"file\": 3,\n"}
+,{"stream_name":"stdout","time":11.492972752,"data":"    \"direct\": 2,\n"}
+,{"stream_name":"stdout","time":11.492975365,"data":"    \"mixed\": 2\n"}
+,{"stream_name":"stdout","time":11.492977754,"data":"  },\n"}
+,{"stream_name":"stdout","time":11.492980154,"data":"  \"attack_path\": \"/kaggle/working/attack.py\",\n"}
+,{"stream_name":"stdout","time":11.492982783,"data":"  \"manifest_path\": \"/kaggle/working/02_candidate_manifest.csv\"\n"}
+,{"stream_name":"stdout","time":11.492985307,"data":"}\n"}
+,{"stream_name":"stdout","time":12.223950158,"data":"contract_check: passed for 20 candidates\n"}
+,{"stream_name":"stdout","time":12.247707383,"data":"RUN_LOCAL_EVALUATION is False; skipping evaluator replay in this notebook run.\n"}
+,{"stream_name":"stdout","time":12.269339711,"data":"Normal notebook run complete. Official server starts only during competition rerun.\n"}
+,{"stream_name":"stderr","time":15.513226529,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":15.513279025,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":15.735175462,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":15.735218792,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":16.612765943,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":16.990743601,"data":"[NbConvertApp] Writing 56613 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":20.024086119,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":21.125308976,"data":"[NbConvertApp] Writing 347899 bytes to __results__.html\n"}
+]

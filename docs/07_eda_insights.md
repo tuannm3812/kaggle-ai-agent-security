@@ -120,21 +120,23 @@ Baseline deep-dive notebook:
 
 - `notebooks/02_baseline_attack.ipynb`
 - Kaggle kernel: `tuannm3812/ai-agent-security-02-baseline-attack`
-- Successful version: `1`
-- Pulled outputs: `artifacts/runs/kaggle-02-baseline-attack-v1/`
+- Successful version: `2`
+- Pulled outputs: `artifacts/runs/kaggle-02-baseline-attack-v2/`
 
-The first baseline generates 12 static EDA-seed candidates across web, email,
-and mixed multi-hop surfaces. It validates the public `aicomp_sdk.attacks`
-contract and writes `attack.py`, `02_candidate_manifest.csv`, and
-`02_baseline_summary.json`.
+The second baseline generates 23 static candidates across web, email, file,
+direct, and mixed multi-hop surfaces. It keeps the v1 EDA seeds and adds more
+targeted v2 probes: indirect report-post pages, API-key validation pages,
+diagnostic/shell pages, file-to-web bridge attempts, and direct sink probes.
+It validates the public `aicomp_sdk.attacks` contract and writes `attack.py`,
+`02_candidate_manifest.csv`, and `02_baseline_summary.json`.
 
 Replay validation:
 
 - Notebook: `notebooks/03_replay_validation.ipynb`
-- Latest local outputs: `artifacts/runs/replay-validation-v2/`
-- Evaluated candidates: `7`
+- Latest local outputs: `artifacts/runs/replay-validation-v4/`
+- Evaluated candidates: `18`
 - Predicate-positive candidates: `0`
-- Unique score-cell hashes observed: `7`
+- Unique score-cell hashes observed: `17`
 
 Replay observations:
 
@@ -155,6 +157,11 @@ Replay observations:
   `fs.write` created guardrail blocks, not predicates. The next attack iteration
   should search for indirect phrasing and multi-hop chains rather than simply
   adding explicit user commands after opening a malicious page.
+- Baseline v2 reaches more score-relevant blocked actions than v1:
+  `web.open -> http.post`, `web.open -> shell.run`, and sensitive `fs.read`
+  blocks. It also includes direct successful `http.post` and `shell.run` probes
+  for comparison, but these do not trigger predicates without an untrusted
+  source or secret-like payload.
 
 Primary questions:
 

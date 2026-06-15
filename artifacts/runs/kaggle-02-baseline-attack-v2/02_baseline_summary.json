@@ -1,0 +1,34 @@
+{
+  "baseline_version": "v2",
+  "candidate_count": 23,
+  "attack_families": [
+    "api_key_validation_chain",
+    "backup_exfil_chain",
+    "credential_audit_chain",
+    "destructive_write",
+    "diagnostic_report_chain",
+    "direct_exec_probe",
+    "direct_share_probe",
+    "encoded_instruction",
+    "explicit_multi_hop",
+    "file_cleanup_write",
+    "file_to_web_multihop",
+    "hidden_background_instruction",
+    "indirect_report_post",
+    "metrics_post_chain",
+    "secret_read_exfiltration",
+    "shell_diagnostic",
+    "untrusted_share",
+    "untrusted_share_scale",
+    "untrusted_write"
+  ],
+  "surfaces": {
+    "web": 11,
+    "email": 5,
+    "file": 3,
+    "direct": 2,
+    "mixed": 2
+  },
+  "attack_path": "/kaggle/working/attack.py",
+  "manifest_path": "/kaggle/working/02_candidate_manifest.csv"
+}

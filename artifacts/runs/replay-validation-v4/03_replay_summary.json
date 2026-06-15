@@ -1,0 +1,10 @@
+{
+  "evaluated_candidates": 18,
+  "predicate_positive": 0,
+  "unique_score_cells": 17,
+  "elapsed_s": 2.939,
+  "max_replay_candidates": 18,
+  "max_tool_hops": 4,
+  "env": "sandbox_deterministic",
+  "selection_note": "web, mixed, and direct candidates prioritized; email deterministic parsing is limited to msg* ids"
+}
