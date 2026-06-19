@@ -101,7 +101,8 @@ competition rerun. See `docs/08_submission_workflow.md`.
 
 Kaggle kernel Version 7 is the first verified normal run of strategy v6. It
 contains 50 candidates split between exfiltration and confused-deputy families.
-Reference-notebook review showed that direct one-hop exfiltration is much more
-replay-dense than the current seven-hop v6 chains. Hold Kaggle Version 7 and
-build a controlled 500-520 candidate exfiltration-only successor before using
-the next submission. See `docs/09_reference_notebook_review.md`.
+Kaggle kernel Version 8 is the verified normal run of strategy v7: 520 unique,
+direct, one-hop exfiltration candidates with 77-99 character prompts. Local and
+Kaggle-generated `attack.py` files match after line-ending normalization. The
+next manual step is to submit Kaggle Version 8 to the competition. See
+`docs/09_reference_notebook_review.md`.

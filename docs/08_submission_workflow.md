@@ -65,13 +65,15 @@ To submit:
 ## 5. Current Release
 
 - Kernel: `tuannm3812/ai-agent-security-02-baseline-attack`
-- Kaggle kernel version: `7`
-- Strategy version inside notebook: `v6`
-- Verified normal-run candidate count: `50`
-- Verified families: `25` exfiltration and `25` confused deputy
-- Competition submission: Version 7 held after replay-density review
+- Kaggle kernel version: `8`
+- Strategy version inside notebook: `v7`
+- Verified normal-run candidate count: `520`
+- Verified family: direct exfiltration
+- Verified prompt range: `77-99` characters
+- Verified expected tool hops: `1` per candidate
+- Competition submission: pending manual submission of Kaggle Version 8
 
 Earlier submitted Kaggle Versions 3, 5, and 6 all contained the stale v3
 20-candidate attack and scored `0.000`. Version 7 is the first verified Kaggle
-run containing the actual v6 strategy. It has not been submitted and is now
-held in favor of a shorter, exfiltration-only successor.
+run containing the actual v6 strategy. It remains held. Version 8 is the
+verified shorter, exfiltration-only successor and is ready for submission.

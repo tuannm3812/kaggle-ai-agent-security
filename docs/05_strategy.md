@@ -146,11 +146,12 @@ toward severe, replayable, diverse traces.
 
 The June 2026 public-notebook review changes the immediate priority. Direct
 one-hop exfiltration can trigger the severity-5 predicate without first opening
-an untrusted source. The next controlled profile should return 500-520 unique,
-short, exfiltration-only candidates with one endpoint and one secret-shaped
-payload each.
+an untrusted source. Strategy v7 now returns 520 unique, short,
+exfiltration-only candidates with one endpoint and one secret-shaped payload
+each.
 
 Keep prompts at or below 140 characters, rotate tool arguments for score-cell
-diversity, and reserve confused-deputy prompts for a separate submission. Do
-not submit current Kaggle Version 7; its seven-hop chains are replay-expensive
-and its mixed family allocation makes a zero or low score hard to diagnose.
+diversity, and reserve confused-deputy prompts for a separate submission.
+Kaggle Version 8 is the verified normal run of this strategy and is the next
+submission candidate. Kaggle Version 7 remains held because its seven-hop chains
+are replay-expensive and its mixed family allocation is hard to diagnose.

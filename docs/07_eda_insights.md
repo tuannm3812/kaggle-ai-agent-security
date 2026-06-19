@@ -120,19 +120,19 @@ Baseline deep-dive notebook:
 
 - `notebooks/02_baseline_attack.ipynb`
 - Kaggle kernel: `tuannm3812/ai-agent-security-02-baseline-attack`
-- Latest local strategy: `v6`
-- Latest local outputs: `artifacts/runs/baseline-attack-v6/`
-- Latest successful Kaggle kernel version: `7`
-- Latest pulled Kaggle outputs: `artifacts/runs/kaggle-02-baseline-attack-v7/`
+- Latest local strategy: `v7`
+- Latest local outputs: `artifacts/runs/baseline-attack-v7/`
+- Latest successful Kaggle kernel version: `8`
+- Latest pulled Kaggle outputs: `artifacts/runs/kaggle-02-baseline-attack-v8/`
 - Latest submitted kernel version: `6` (`0.000` public score)
 
 Kaggle kernel Versions 3, 5, and 6 all submitted the same stale v3 attack and
 scored `0.000`; their version labels did not represent the newer local source.
-Kernel Version 7 is the first verified execution of the actual v6 strategy. It
-generates 50 candidates split evenly between seven-call taint-window
-exfiltration chains and synonym-based confused-deputy prompts. Version 7 has
-completed as a normal notebook run but has not yet been submitted through the
-competition rerun path.
+Kernel Version 8 is the verified execution of strategy v7. It generates 520
+unique, exfiltration-only candidates with one expected tool hop, unique public
+endpoints, nine rotated scoring payloads, and prompts between 77 and 99
+characters. Version 8 completed as a normal notebook run and has not yet been
+submitted through the competition rerun path.
 
 Replay validation:
 
@@ -190,22 +190,21 @@ Primary questions:
 5. Which families should be expanded: exfiltration, execution, share, write, or
    destructive write?
 
-Reference-notebook review found a more replay-dense severity-5 path: direct,
-one-hop exfiltration with short prompts. Kaggle Version 7 remains a valid normal
-run of v6 but should be held rather than submitted. The next deep-dive pass is a
-controlled 500-520 candidate exfiltration-only successor.
+Reference-notebook review led to strategy v7 and Kaggle Version 8. The local
+and pulled Kaggle attacks match after line-ending normalization, and the normal
+run passed its 520-candidate contract check. The next deep-dive pass is
+competition feedback for this isolated exfiltration family.
 
 ## 8. Strategy For The Next Notebook
 
 Priority for `02_baseline_attack.ipynb`:
 
-1. Hold Kaggle Version 7; do not spend a competition submission on it.
-2. Build 500-520 unique, direct, one-hop exfiltration candidates capped at 140
-   characters per message.
-3. Use one valid public endpoint and one scoring payload per candidate.
-4. Submit exfiltration-only first so leaderboard feedback isolates fire rate and
-   replay capacity.
-5. Keep deputy prompts for a later separate submission.
+1. Submit Kaggle notebook Version 8 through **Submit to Competition**.
+2. Confirm the competition rerun completes and record its public score.
+3. Use that score to decide whether to scale above 520 or improve prompt fire
+   rate first.
+4. Keep deputy prompts for a later separate submission.
+5. Keep Kaggle Version 7 held as an archived mixed-family experiment.
 6. Keep raw replay traces local when fixture strings resemble credentials.
 
-The next milestone is a replay-dense exfiltration-only Kaggle version.
+The next milestone is competition feedback for Kaggle Version 8.

@@ -114,3 +114,21 @@ version with this controlled first test:
 Starting at 500-520 preserves most of the replay-density advantage while staying
 below the unverified 620/700 boundary profiles. The result should determine
 whether to scale upward or improve fire rate before using another submission.
+
+## 7. Implementation Status
+
+The recommended experiment is implemented as strategy v7 and Kaggle kernel
+Version 8. Verification results:
+
+- 520 candidates and 520 unique endpoints;
+- one direct-exfiltration family;
+- five short prompt forms;
+- nine rotated scoring payload labels;
+- 77-99 characters per message;
+- one expected tool hop per candidate;
+- 49 KB generated `attack.py`;
+- official SDK schema validation passed;
+- Kaggle normal run completed;
+- local and Kaggle attack source match after normalizing line endings.
+
+Version 8 is ready for the manual **Submit to Competition** action.

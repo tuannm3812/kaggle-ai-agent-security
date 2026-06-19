@@ -91,6 +91,17 @@ artifacts/runs/kaggle-02-baseline-attack-v3/__pycache__/
 !artifacts/runs/kaggle-02-baseline-attack-v7/*.log
 !artifacts/runs/kaggle-02-baseline-attack-v7/attack.py
 artifacts/runs/kaggle-02-baseline-attack-v7/__pycache__/
+!artifacts/runs/kaggle-02-baseline-attack-v8/
+!artifacts/runs/kaggle-02-baseline-attack-v8/*.csv
+!artifacts/runs/kaggle-02-baseline-attack-v8/*.json
+!artifacts/runs/kaggle-02-baseline-attack-v8/*.log
+!artifacts/runs/kaggle-02-baseline-attack-v8/attack.py
+artifacts/runs/kaggle-02-baseline-attack-v8/__pycache__/
+!artifacts/runs/baseline-attack-v7/
+!artifacts/runs/baseline-attack-v7/*.csv
+!artifacts/runs/baseline-attack-v7/*.json
+!artifacts/runs/baseline-attack-v7/attack.py
+artifacts/runs/baseline-attack-v7/__pycache__/
 !artifacts/runs/baseline-attack-v6/
 !artifacts/runs/baseline-attack-v6/*.csv
 !artifacts/runs/baseline-attack-v6/*.json
