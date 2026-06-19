@@ -199,6 +199,8 @@ strategy; previous zero scores only describe the stale v3 attack.
 Priority for `02_baseline_attack.ipynb`:
 
 1. Manually submit Kaggle notebook Version 7 to the competition.
+   The competition rerun will generate `submission.csv`; it should not be added
+   manually to the normal notebook output.
 2. Confirm the rerun completes and record its public score.
 3. Compare Version 7 feedback with the v6 family split.
 4. If the score remains zero, isolate exfiltration and confused-deputy families

@@ -12,6 +12,11 @@ In this competition the scenario is implicit in the offline fixture corpus and
 the model behavior. The submission does not return traces; it returns user
 message chains that the evaluator replays.
 
+Submission packaging means producing and validating `attack.py` inside the
+notebook. It does not mean constructing score rows or a local `submission.csv`.
+The trusted gateway creates that CSV only after **Submit to Competition**
+triggers a competition rerun.
+
 ## 2. Candidate Manifest
 
 Use a manifest table for every run.
@@ -111,3 +116,14 @@ aicomp validate redteam attack.py
 aicomp evaluate redteam attack.py --budget-s 60 --agent deterministic --env gym --artifacts-dir artifacts/runs/eval_smoke --save-framework-events
 ```
 
+## 8. Kaggle Release Gate
+
+1. Execute the notebook locally and ensure outputs are current.
+2. Push the synchronized notebook to Kaggle and wait for a successful normal
+   run.
+3. Pull normal-run outputs and verify strategy version, candidate count, and
+   generated `attack.py`.
+4. Submit that exact Kaggle version through **Submit to Competition**.
+5. Expect `submission.csv` only from the competition rerun.
+6. Record the resulting submission reference and score before changing the
+   prompt bank.

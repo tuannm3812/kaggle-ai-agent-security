@@ -45,7 +45,8 @@ Initial project goals:
 |   |-- 04_agent_workflow.md
 |   |-- 05_strategy.md
 |   |-- 06_coding_rules.md
-|   `-- 07_eda_insights.md
+|   |-- 07_eda_insights.md
+|   `-- 08_submission_workflow.md
 |-- notebooks/
 |   |-- 01_eda.ipynb
 |   |-- 02_baseline_attack.ipynb
@@ -88,10 +89,16 @@ retry inside the activated environment.
 | `01_eda.ipynb` | Inspect downloaded files, schemas, evaluator entry points, and sample outputs. |
 | `02_baseline_attack.ipynb` | Build the first valid attack-generation baseline. |
 | `03_replay_validation.ipynb` | Validate determinism, replay traces, and evaluator acceptance. |
-| `04_submission_packaging.ipynb` | Produce the final submission artifact and manifest. |
+| `04_submission_packaging.ipynb` | Audit release metadata and submission readiness. |
+
+The competition does not accept a manually uploaded local `submission.csv` as
+the attack artifact. The submitted notebook serves `/kaggle/working/attack.py`;
+the trusted competition gateway generates `submission.csv` during the
+competition rerun. See `docs/08_submission_workflow.md`.
 
 ## 5. Current Status
 
-Repository scaffold is ready and the official competition package has been
-downloaded into ignored `artifacts/data/`. The first instruction pass, data
-dictionary, attack workflow, and strategy are documented in `docs/`.
+Kaggle kernel Version 7 is the first verified normal run of strategy v6. It
+contains 50 candidates split between exfiltration and confused-deputy families.
+The next manual step is to submit Kaggle Version 7 to the competition; only that
+rerun will generate `submission.csv` and a leaderboard score.

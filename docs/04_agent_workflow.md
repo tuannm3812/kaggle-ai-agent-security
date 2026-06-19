@@ -30,3 +30,13 @@ Each serious run should record:
 - submission artifact path;
 - result or reason for not submitting.
 
+For notebook submissions, also record:
+
+- Kaggle kernel version;
+- strategy version embedded in the notebook;
+- whether the run was normal or a competition rerun;
+- whether `submission.csv` was gateway-generated;
+- Kaggle submission reference and public score.
+
+Never infer the strategy from the Kaggle version number alone. Verify the
+pulled `02_baseline_summary.json` before submitting.

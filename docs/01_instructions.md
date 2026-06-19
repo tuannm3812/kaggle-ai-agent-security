@@ -80,6 +80,21 @@ The Kaggle gateway runs a command-response protocol:
 5. The gateway replays each candidate against the target model and guardrail.
 6. The gateway writes `submission.csv` with per-model/per-guardrail scores.
 
+`submission.csv` is an evaluator output, not a file that the attack notebook
+must prepare manually. A normal notebook run has
+`KAGGLE_IS_COMPETITION_RERUN` unset, so it generates `attack.py` and diagnostic
+artifacts but does not start the trusted gateway or write `submission.csv`.
+
+The gateway-owned CSV schema is:
+
+```csv
+Id,Score
+gpt_oss_public,<score>
+gemma_public,<score>
+```
+
+Private guardrail rows may be added by the competition evaluator.
+
 Public gateway defaults from the downloaded package:
 
 - Attack seed: `123`.
@@ -191,3 +206,9 @@ Before building solution logic:
 - Keep `attack.py` under 5 MB.
 - Return candidate chains, not trace dictionaries.
 - Do not rely on local-only fixtures or credentials.
+- Treat a completed normal Kaggle run as validation, not as a leaderboard
+  submission.
+- Submit the exact completed notebook version through **Submit to Competition**
+  to trigger the rerun that generates `submission.csv`.
+- Verify pulled outputs report the intended strategy version and candidate
+  count before submitting.
