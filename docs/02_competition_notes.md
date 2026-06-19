@@ -81,7 +81,8 @@ During a competition rerun, `JEDAttackGateway.write_submission(...)` creates:
 
 | File | Owner | Meaning |
 | --- | --- | --- |
-| `submission.csv` | Trusted gateway | Per-model/per-guardrail score rows submitted to Kaggle. |
+| `submission.csv` in normal run | Notebook | Zero-valued placeholder required to make the version selectable. |
+| `submission.csv` in rerun | Trusted gateway | Per-model/per-guardrail scores used by Kaggle. |
 | `submission_details.json` | Trusted gateway | Safe evaluation details excluding full findings. |
 
 `submission.csv` columns:
@@ -91,8 +92,9 @@ During a competition rerun, `JEDAttackGateway.write_submission(...)` creates:
 | `Id` | Evaluation row such as `gpt_oss_public` or `gemma_public`. |
 | `Score` | Gateway-computed normalized attack score for that row. |
 
-Normal notebook execution does not create either file because the competition
-gateway only runs when `KAGGLE_IS_COMPETITION_RERUN` is set.
+Normal notebook execution creates only the placeholder `submission.csv`.
+Scored rows and `submission_details.json` belong to the private competition
+rerun, when `KAGGLE_IS_COMPETITION_RERUN` is set.
 
 ## 5. Trace Dictionary
 

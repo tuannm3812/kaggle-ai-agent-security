@@ -92,17 +92,17 @@ retry inside the activated environment.
 | `03_replay_validation.ipynb` | Validate determinism, replay traces, and evaluator acceptance. |
 | `04_submission_packaging.ipynb` | Audit release metadata and submission readiness. |
 
-The competition does not accept a manually uploaded local `submission.csv` as
-the attack artifact. The submitted notebook serves `/kaggle/working/attack.py`;
-the trusted competition gateway generates `submission.csv` during the
-competition rerun. See `docs/08_submission_workflow.md`.
+The normal Kaggle run must expose a file named `submission.csv` before the
+version can be selected for submission. This repository writes a zero-valued
+placeholder during normal runs. During the private competition rerun, the
+notebook serves `/kaggle/working/attack.py` and the trusted gateway replaces the
+placeholder role with real evaluated scores. See `docs/08_submission_workflow.md`.
 
 ## 5. Current Status
 
 Kaggle kernel Version 7 is the first verified normal run of strategy v6. It
 contains 50 candidates split between exfiltration and confused-deputy families.
-Kaggle kernel Version 8 is the verified normal run of strategy v7: 520 unique,
-direct, one-hop exfiltration candidates with 77-99 character prompts. Local and
-Kaggle-generated `attack.py` files match after line-ending normalization. The
-next manual step is to submit Kaggle Version 8 to the competition. See
-`docs/09_reference_notebook_review.md`.
+Kaggle kernel Version 9 is the submission-ready normal run of strategy v7:
+520 unique, direct, one-hop exfiltration candidates with 77-99 character prompts.
+It exposes the required placeholder `submission.csv`; the next manual step is to
+submit Version 9 to the competition. See `docs/09_reference_notebook_review.md`.

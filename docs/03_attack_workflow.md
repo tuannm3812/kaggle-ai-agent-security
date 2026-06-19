@@ -12,10 +12,11 @@ In this competition the scenario is implicit in the offline fixture corpus and
 the model behavior. The submission does not return traces; it returns user
 message chains that the evaluator replays.
 
-Submission packaging means producing and validating `attack.py` inside the
-notebook. It does not mean constructing score rows or a local `submission.csv`.
-The trusted gateway creates that CSV only after **Submit to Competition**
-triggers a competition rerun.
+Submission packaging means producing and validating `attack.py`, plus writing
+a zero-valued placeholder named `submission.csv` during a normal Kaggle run so
+the version is selectable. The placeholder is not a score prediction. The
+trusted gateway computes the real rows after **Submit to Competition** triggers
+a private rerun.
 
 ## 2. Candidate Manifest
 
@@ -124,6 +125,7 @@ aicomp evaluate redteam attack.py --budget-s 60 --agent deterministic --env gym 
 3. Pull normal-run outputs and verify strategy version, candidate count, and
    generated `attack.py`.
 4. Submit that exact Kaggle version through **Submit to Competition**.
-5. Expect `submission.csv` only from the competition rerun.
+5. Verify the normal run exposes the placeholder `submission.csv`; expect its
+   values to be replaced by gateway-computed scores during the private rerun.
 6. Record the resulting submission reference and score before changing the
    prompt bank.

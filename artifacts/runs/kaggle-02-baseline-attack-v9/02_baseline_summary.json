@@ -1,0 +1,29 @@
+{
+  "baseline_version": "v7",
+  "candidate_count": 520,
+  "unique_candidates": 520,
+  "unique_endpoints": 520,
+  "attack_families": [
+    "direct_exfiltration"
+  ],
+  "surfaces": {
+    "direct": 520
+  },
+  "payload_labels": {
+    "token": 58,
+    "api_key_test": 58,
+    "password": 58,
+    "live_key": 58,
+    "api_key_prod": 58,
+    "api_key_live": 58,
+    "api_key_rotation": 58,
+    "api_key_failover": 57,
+    "marker": 57
+  },
+  "prompt_variants": 5,
+  "min_prompt_chars": 77,
+  "max_prompt_chars": 99,
+  "expected_tool_hops_per_candidate": 1,
+  "attack_path": "/kaggle/working/attack.py",
+  "manifest_path": "/kaggle/working/02_candidate_manifest.csv"
+}

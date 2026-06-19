@@ -92,8 +92,9 @@ stable predicate family has already been identified.
 - The generator is roughly 80 KB and contains many inactive profiles. We should
   implement the small active mechanism rather than copy the framework wholesale.
 - Yaroslav writes a zero-valued fallback `submission.csv` during normal runs.
-  This is unnecessary and potentially confusing; the competition gateway must
-  generate the real scoring file during a rerun.
+  Kaggle's submission dialog confirms that this placeholder filename is
+  required to make a notebook version selectable. Its values are not scores;
+  the trusted gateway computes the real rows during the private rerun.
 - Yaroslav's markdown says `TOKEN-only`, but the executable rotates nine payload
   strings and also includes deputy candidates.
 
@@ -117,8 +118,8 @@ whether to scale upward or improve fire rate before using another submission.
 
 ## 7. Implementation Status
 
-The recommended experiment is implemented as strategy v7 and Kaggle kernel
-Version 8. Verification results:
+The recommended experiment is implemented as strategy v7. Kaggle kernel
+Version 9 is the submission-ready normal run. Verification results:
 
 - 520 candidates and 520 unique endpoints;
 - one direct-exfiltration family;
@@ -129,6 +130,7 @@ Version 8. Verification results:
 - 49 KB generated `attack.py`;
 - official SDK schema validation passed;
 - Kaggle normal run completed;
-- local and Kaggle attack source match after normalizing line endings.
+- local and Kaggle attack source match after normalizing line endings;
+- required placeholder `submission.csv` is present in Version 9 outputs.
 
-Version 8 is ready for the manual **Submit to Competition** action.
+Version 9 is ready for the manual **Submit to Competition** action.

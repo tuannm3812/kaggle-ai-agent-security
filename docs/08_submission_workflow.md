@@ -19,11 +19,12 @@ The competition gateway loads the served attack, evaluates its returned
 | State | Trigger | Expected outputs | Leaderboard result |
 | --- | --- | --- | --- |
 | Local execution | Run notebook locally | Local `attack.py`, manifest, summary | None |
-| Normal Kaggle version | Save/run a notebook version | `/kaggle/working/attack.py`, manifest, summary, log | None |
+| Normal Kaggle version | Save/run a notebook version | `attack.py`, manifest, summary, log, placeholder `submission.csv` | None |
 | Competition rerun | Submit a completed notebook version | Gateway-generated `submission.csv` and `submission_details.json` | Yes |
 
-A normal Kaggle version displaying `competition_rerun: False` is healthy but
-not submitted. It should not be expected to contain `submission.csv`.
+A normal Kaggle version displaying `competition_rerun: False` must still
+write a zero-valued `submission.csv` so Kaggle can select that output filename.
+It is a placeholder, not a leaderboard result.
 
 ## 3. Generated CSV Schema
 
@@ -65,15 +66,17 @@ To submit:
 ## 5. Current Release
 
 - Kernel: `tuannm3812/ai-agent-security-02-baseline-attack`
-- Kaggle kernel version: `8`
+- Kaggle kernel version: `9`
 - Strategy version inside notebook: `v7`
 - Verified normal-run candidate count: `520`
 - Verified family: direct exfiltration
 - Verified prompt range: `77-99` characters
 - Verified expected tool hops: `1` per candidate
-- Competition submission: pending manual submission of Kaggle Version 8
+- Normal-run output: placeholder `submission.csv` verified
+- Competition submission: pending manual submission of Kaggle Version 9
 
 Earlier submitted Kaggle Versions 3, 5, and 6 all contained the stale v3
 20-candidate attack and scored `0.000`. Version 7 is the first verified Kaggle
 run containing the actual v6 strategy. It remains held. Version 8 is the
-verified shorter, exfiltration-only successor and is ready for submission.
+verified shorter, exfiltration-only successor. Version 9 adds the required
+normal-run placeholder output and is ready for submission.
