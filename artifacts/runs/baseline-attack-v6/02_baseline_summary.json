@@ -1,0 +1,14 @@
+{
+  "baseline_version": "v6",
+  "candidate_count": 50,
+  "attack_families": [
+    "confused_deputy",
+    "exfiltration"
+  ],
+  "surfaces": {
+    "web": 25,
+    "email": 25
+  },
+  "attack_path": "F:\\drive_tuannm3812\\My Drive\\10_Github\\2. Kaggle\\kaggle-ai-agent-security\\artifacts\\runs\\baseline-attack-v6\\attack.py",
+  "manifest_path": "F:\\drive_tuannm3812\\My Drive\\10_Github\\2. Kaggle\\kaggle-ai-agent-security\\artifacts\\runs\\baseline-attack-v6\\02_candidate_manifest.csv"
+}

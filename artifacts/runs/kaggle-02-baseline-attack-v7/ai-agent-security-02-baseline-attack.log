@@ -1,0 +1,38 @@
+[{"stream_name":"stderr","time":9.023131163,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.023203764,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.023209618,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.023213591,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.832461482,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.832499324,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.832505166,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.832528366,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.323097937,"data":"repo_root: /kaggle/working\n"}
+,{"stream_name":"stdout","time":12.323158694,"data":"official_root: /kaggle/input/competitions/ai-agent-security-multi-step-tool-attacks\n"}
+,{"stream_name":"stdout","time":12.323178232,"data":"output_dir: /kaggle/working\n"}
+,{"stream_name":"stdout","time":12.323183277,"data":"competition_rerun: False\n"}
+,{"stream_name":"stdout","time":12.465892776,"data":"{\n"}
+,{"stream_name":"stdout","time":12.465929029,"data":"  \"baseline_version\": \"v6\",\n"}
+,{"stream_name":"stdout","time":12.465935062,"data":"  \"candidate_count\": 50,\n"}
+,{"stream_name":"stdout","time":12.465939893,"data":"  \"attack_families\": [\n"}
+,{"stream_name":"stdout","time":12.465944802,"data":"    \"confused_deputy\",\n"}
+,{"stream_name":"stdout","time":12.465949837,"data":"    \"exfiltration\"\n"}
+,{"stream_name":"stdout","time":12.46595485,"data":"  ],\n"}
+,{"stream_name":"stdout","time":12.465959233,"data":"  \"surfaces\": {\n"}
+,{"stream_name":"stdout","time":12.46596388,"data":"    \"web\": 25,\n"}
+,{"stream_name":"stdout","time":12.465968384,"data":"    \"email\": 25\n"}
+,{"stream_name":"stdout","time":12.46597332,"data":"  },\n"}
+,{"stream_name":"stdout","time":12.465977586,"data":"  \"attack_path\": \"/kaggle/working/attack.py\",\n"}
+,{"stream_name":"stdout","time":12.46598251,"data":"  \"manifest_path\": \"/kaggle/working/02_candidate_manifest.csv\"\n"}
+,{"stream_name":"stdout","time":12.465987639,"data":"}\n"}
+,{"stream_name":"stdout","time":13.406376456,"data":"contract_check: passed for 50 candidates\n"}
+,{"stream_name":"stdout","time":13.43315619,"data":"RUN_LOCAL_EVALUATION is False; skipping evaluator replay in this notebook run.\n"}
+,{"stream_name":"stdout","time":13.45735238,"data":"Normal notebook run complete. Official server starts only during competition rerun.\n"}
+,{"stream_name":"stderr","time":16.868900812,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":16.868944779,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":17.078382556,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":17.078416405,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":17.916165468,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":18.327049897,"data":"[NbConvertApp] Writing 73063 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":21.592183845,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":22.705454625,"data":"[NbConvertApp] Writing 342667 bytes to __results__.html\n"}
+]

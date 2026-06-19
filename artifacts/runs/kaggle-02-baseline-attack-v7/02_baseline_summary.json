@@ -1,0 +1,14 @@
+{
+  "baseline_version": "v6",
+  "candidate_count": 50,
+  "attack_families": [
+    "confused_deputy",
+    "exfiltration"
+  ],
+  "surfaces": {
+    "web": 25,
+    "email": 25
+  },
+  "attack_path": "/kaggle/working/attack.py",
+  "manifest_path": "/kaggle/working/02_candidate_manifest.csv"
+}

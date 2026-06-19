@@ -120,16 +120,19 @@ Baseline deep-dive notebook:
 
 - `notebooks/02_baseline_attack.ipynb`
 - Kaggle kernel: `tuannm3812/ai-agent-security-02-baseline-attack`
-- Latest local version: `v3`
-- Latest local outputs: `artifacts/runs/baseline-attack-v3/`
-- Latest successful Kaggle version: `3`
-- Latest pulled Kaggle outputs: `artifacts/runs/kaggle-02-baseline-attack-v3/`
+- Latest local strategy: `v6`
+- Latest local outputs: `artifacts/runs/baseline-attack-v6/`
+- Latest successful Kaggle kernel version: `7`
+- Latest pulled Kaggle outputs: `artifacts/runs/kaggle-02-baseline-attack-v7/`
+- Latest submitted kernel version: `6` (`0.000` public score)
 
-Baseline v3 generates 20 focused web candidates from the four v2 families that
-were predicate-positive under a permissive guardrail: report-post, backup
-exfiltration, API-key validation, and diagnostic execution. It keeps the attack
-code self-contained for Kaggle and writes `attack.py`,
-`02_candidate_manifest.csv`, and `02_baseline_summary.json`.
+Kaggle kernel Versions 3, 5, and 6 all submitted the same stale v3 attack and
+scored `0.000`; their version labels did not represent the newer local source.
+Kernel Version 7 is the first verified execution of the actual v6 strategy. It
+generates 50 candidates split evenly between seven-call taint-window
+exfiltration chains and synonym-based confused-deputy prompts. Version 7 has
+completed as a normal notebook run but has not yet been submitted through the
+competition rerun path.
 
 Replay validation:
 
@@ -187,22 +190,21 @@ Primary questions:
 5. Which families should be expanded: exfiltration, execution, share, write, or
    destructive write?
 
-Baseline v3 has now run successfully on Kaggle as a normal notebook version.
-The next deep-dive pass should use competition rerun/submission feedback, when
-available, to decide whether v4 should expand these four families or switch to a
-different surface such as email/share/write.
+The next deep-dive pass is competition submission feedback for Kaggle Version
+7. That result will be the first meaningful leaderboard test of the v6
+strategy; previous zero scores only describe the stale v3 attack.
 
 ## 8. Strategy For The Next Notebook
 
 Priority for `02_baseline_attack.ipynb`:
 
-1. Submit/run the v3 notebook through the competition rerun path.
-2. Pull any submission or rerun outputs into a versioned artifact directory.
-3. Compare the competition feedback against replay v6.
-4. Dedupe by score-cell hash before expanding prompt volume.
-5. Keep prompt wording careful: avoid explicit authorization words when trying
-   to trigger `UNTRUSTED_TO_ACTION` or `CONFUSED_DEPUTY`.
-6. Commit the Kaggle run evidence from local Git rather than relying on
-   Kaggle's copy-to-GitHub feature.
+1. Manually submit Kaggle notebook Version 7 to the competition.
+2. Confirm the rerun completes and record its public score.
+3. Compare Version 7 feedback with the v6 family split.
+4. If the score remains zero, isolate exfiltration and confused-deputy families
+   into separate submissions before adding more prompt volume.
+5. Keep raw replay traces local when fixture strings resemble credentials.
+6. Commit pulled evidence from local Git rather than relying on Kaggle's
+   copy-to-GitHub feature.
 
-The next milestone is competition feedback for v3.
+The next milestone is competition feedback for Kaggle Version 7.
