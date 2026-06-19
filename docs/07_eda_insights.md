@@ -190,23 +190,22 @@ Primary questions:
 5. Which families should be expanded: exfiltration, execution, share, write, or
    destructive write?
 
-The next deep-dive pass is competition submission feedback for Kaggle Version
-7. That result will be the first meaningful leaderboard test of the v6
-strategy; previous zero scores only describe the stale v3 attack.
+Reference-notebook review found a more replay-dense severity-5 path: direct,
+one-hop exfiltration with short prompts. Kaggle Version 7 remains a valid normal
+run of v6 but should be held rather than submitted. The next deep-dive pass is a
+controlled 500-520 candidate exfiltration-only successor.
 
 ## 8. Strategy For The Next Notebook
 
 Priority for `02_baseline_attack.ipynb`:
 
-1. Manually submit Kaggle notebook Version 7 to the competition.
-   The competition rerun will generate `submission.csv`; it should not be added
-   manually to the normal notebook output.
-2. Confirm the rerun completes and record its public score.
-3. Compare Version 7 feedback with the v6 family split.
-4. If the score remains zero, isolate exfiltration and confused-deputy families
-   into separate submissions before adding more prompt volume.
-5. Keep raw replay traces local when fixture strings resemble credentials.
-6. Commit pulled evidence from local Git rather than relying on Kaggle's
-   copy-to-GitHub feature.
+1. Hold Kaggle Version 7; do not spend a competition submission on it.
+2. Build 500-520 unique, direct, one-hop exfiltration candidates capped at 140
+   characters per message.
+3. Use one valid public endpoint and one scoring payload per candidate.
+4. Submit exfiltration-only first so leaderboard feedback isolates fire rate and
+   replay capacity.
+5. Keep deputy prompts for a later separate submission.
+6. Keep raw replay traces local when fixture strings resemble credentials.
 
-The next milestone is competition feedback for Kaggle Version 7.
+The next milestone is a replay-dense exfiltration-only Kaggle version.

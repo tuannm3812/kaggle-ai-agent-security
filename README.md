@@ -46,7 +46,8 @@ Initial project goals:
 |   |-- 05_strategy.md
 |   |-- 06_coding_rules.md
 |   |-- 07_eda_insights.md
-|   `-- 08_submission_workflow.md
+|   |-- 08_submission_workflow.md
+|   `-- 09_reference_notebook_review.md
 |-- notebooks/
 |   |-- 01_eda.ipynb
 |   |-- 02_baseline_attack.ipynb
@@ -100,5 +101,7 @@ competition rerun. See `docs/08_submission_workflow.md`.
 
 Kaggle kernel Version 7 is the first verified normal run of strategy v6. It
 contains 50 candidates split between exfiltration and confused-deputy families.
-The next manual step is to submit Kaggle Version 7 to the competition; only that
-rerun will generate `submission.csv` and a leaderboard score.
+Reference-notebook review showed that direct one-hop exfiltration is much more
+replay-dense than the current seven-hop v6 chains. Hold Kaggle Version 7 and
+build a controlled 500-520 candidate exfiltration-only successor before using
+the next submission. See `docs/09_reference_notebook_review.md`.

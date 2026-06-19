@@ -69,8 +69,9 @@ To submit:
 - Strategy version inside notebook: `v6`
 - Verified normal-run candidate count: `50`
 - Verified families: `25` exfiltration and `25` confused deputy
-- Competition submission: pending manual submission of Kaggle Version 7
+- Competition submission: Version 7 held after replay-density review
 
 Earlier submitted Kaggle Versions 3, 5, and 6 all contained the stale v3
 20-candidate attack and scored `0.000`. Version 7 is the first verified Kaggle
-run containing the actual v6 strategy.
+run containing the actual v6 strategy. It has not been submitted and is now
+held in favor of a shorter, exfiltration-only successor.
